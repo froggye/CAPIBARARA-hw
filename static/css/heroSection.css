@@ -1,0 +1,116 @@
+
+.hero {
+    padding-top: var(--container-padding);
+    padding-bottom: 120px;
+
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: minmax(0, 720px) auto;
+    grid-template-areas:
+            "text   image"
+            "button image";
+    gap: 48px 32px;
+
+    background-image:
+            url("../img/Wave-top.svg"),
+            url("../img/Wave-oranges.svg"),
+            url("../img/Wave-bottom.svg");
+    background-repeat: no-repeat;
+    background-position:
+            bottom,
+            left 80px bottom,
+            bottom;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        grid-template-areas:
+                "image text"
+                "image button";
+        grid-template-columns: auto 1fr;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        grid-template-areas:
+                "text"
+                "image"
+                "button";
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+.hero__text {
+    grid-area: text;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: end;
+}
+
+.hero__text h1 {
+    color: var(--gray-900)
+}
+
+.hero__text p {
+    color: var(--gray-600)
+}
+
+@media (max-width: 1024px) {
+    .hero__text p {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__text h1 {
+        text-align: center;
+    }
+}
+
+.hero__button {
+    grid-area: button;
+
+    display: flex;
+    justify-self: end;
+    width: fit-content;
+    height: fit-content;
+    color: var(--gray-50);
+    padding: 8px 48px;
+    background-color: var(--orange-400);
+    border-radius: 20px;
+}
+
+@media (max-width: 1024px) {
+    .hero__button {
+        justify-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__button {
+        margin: 0 -48px;
+    }
+}
+
+.hero__img {
+    grid-area: image;
+    width: 320px;
+}
+
+@media (max-width: 1024px) {
+    .hero__img {
+        width: 236px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__img {
+        width: 279px;
+        justify-self: center;
+    }
+}

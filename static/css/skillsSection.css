@@ -1,0 +1,77 @@
+
+.skills {
+    padding-top: var(--container-padding);
+    padding-bottom: var(--container-padding);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+
+    background-image: url("../img/orange-corner.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+@media (max-width: 768px) {
+    .skills {
+        background-image: none;
+    }
+}
+
+.skills__text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skills__text h1,
+.skills__text p {
+    color: var(--gray-600);
+    text-align: center;
+}
+
+.skills__slider {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 720px;
+}
+
+@media (max-width: 768px) {
+    .skills__slider {
+        max-width: 480px;
+    }
+}
+
+.skills__slider__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 102px;
+}
+
+@media (max-width: 1024px) {
+    .skills__slider__item {
+        max-width: 90px;
+    }
+}
+
+.skills__slider__item p {
+    color: var(--gray-600);
+}
+
+.skills__slider__item img {
+    max-width: 64px;
+}
+
+@media (max-width: 768px) {
+    .skills__slider__item--hide {
+        display: none;
+    }
+}
+

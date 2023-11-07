@@ -1,0 +1,40 @@
+
+.header {
+    padding: 16px 112px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px){
+    .header{
+        padding: 16px;
+    }
+}
+
+.header__menu {
+    display: flex;
+    gap: 24px;
+}
+
+.header__menu__item {
+    color: var(--gray-600);
+}
+
+.header__menu-mobile {
+    display: none;
+}
+
+@media (max-width: 768px){
+    .header__menu {
+        display: none;
+    }
+
+    .header__menu-mobile {
+        display: block;
+        background-image: url("../img/menu.svg");
+        width: 36px;
+        height: 36px;
+    }
+}
