@@ -1,18 +1,21 @@
 
 :root {
     --radius: 12px;
-    --container-padding: 96px;
+    --container-padding-tb: 96px;
+    --container-padding-lr: 80px;
 }
 
 @media (max-width: 1024px) {
     :root {
-        --container-padding: 64px;
+        --container-padding-tb: 64px;
+        --container-padding-lr: 64px;
     }
 }
 
 @media (max-width: 768px) {
     :root {
-        --container-padding: 32px;
+        --container-padding-tb: 32px;
+        --container-padding-lr: 16px;
     }
 }
 
@@ -20,22 +23,8 @@
     margin: 0 auto;
     width: 100%;
     max-width: 1440px;
-    padding-left: 80px;
-    padding-right: 80px;
-}
-
-@media (max-width: 1024px) {
-    .container {
-        padding-left: 64px;
-        padding-right: 64px;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
+    padding-left: var(--container-padding-lr);
+    padding-right: var(--container-padding-lr);
 }
 
 .container--gray {

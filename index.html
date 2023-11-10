@@ -23,22 +23,24 @@
 
 <body>
 <section class="container header">
-    <img src="static/img/Logo.svg" alt="Capibarara.com">
-    <button class="header__menu-mobile"></button>
-    <nav class="header__menu body2--medium">
-        <a href="#experience" class="header__menu__item">
-            Experience
-        </a>
-        <a href="#work" class="header__menu__item">
-            Work
-        </a>
-        <a href="#testimonials" class="header__menu__item">
-            Testimonials
-        </a>
-        <a href="#contacts" class="header__menu__item">
-            Contact
-        </a>
-    </nav>
+    <div class="header-wrapper">
+        <img src="static/img/logo.svg" alt="Capibarara.com">
+        <button class="header__menu-mobile"></button>
+        <nav class="header__menu body2--medium">
+            <a href="#experience" class="header__menu-item">
+                Experience
+            </a>
+            <a href="#work" class="header__menu-item">
+                Work
+            </a>
+            <a href="#testimonials" class="header__menu-item">
+                Testimonials
+            </a>
+            <a href="#contacts" class="header__menu-item">
+                Contact
+            </a>
+        </nav>
+    </div>
 </section>
 <section class="container hero">
     <div class="hero__text">
@@ -56,43 +58,46 @@
     </a>
     <img class="hero__img" src="static/img/hero-pic.png"
          alt="My pic is supposed to be here">
+    <img src="static/img/wave-bottom.svg" class="hero__wave-bottom">
+    <img src="static/img/wave-oranges.svg" class="hero__wave-oranges">
+    <img src="static/img/wave-top.svg" class="hero__wave-top">
 </section>
 <section class="container skills">
     <div class="skills__text">
-        <h1>
+        <h2 class="header1">
             Skills
-        </h1>
+        </h2>
         <p class="subtitle">
             The skills, tools and technologies Capybarara is really good at:
         </p>
     </div>
     <ul class="skills__slider">
-        <li class="skills__slider__item">
-            <img src="static/img/icon-javscript.svg">
+        <li class="skills__slider-item">
+            <img src="static/img/icon-javscript.png">
             <p class="body1">
                 Javascript
             </p>
         </li>
-        <li class="skills__slider__item">
-            <img src="static/img/icon-typescript.svg">
+        <li class="skills__slider-item">
+            <img src="static/img/icon-typescript.png">
             <p class="body1">
                 Typescript
             </p>
         </li>
-        <li class="skills__slider__item">
-            <img src="static/img/icon-react.svg">
+        <li class="skills__slider-item">
+            <img src="static/img/icon-react.png">
             <p class="body1">
                 React
             </p>
         </li>
-        <li class="skills__slider__item skills__slider__item--hide">
-            <img src="static/img/icon-nextjs.svg">
+        <li class="skills__slider-item skills__slider-item--hide">
+            <img src="static/img/icon-nextjs.png">
             <p class="body1">
                 Next.js
             </p>
         </li>
-        <li class="skills__slider__item skills__slider__item--hide">
-            <img src="static/img/icon-nodejs.svg">
+        <li class="skills__slider-item skills__slider-item--hide">
+            <img src="static/img/icon-nodejs.png">
             <p class="body1">
                 Node.js
             </p>
@@ -101,29 +106,29 @@
 </section>
 <section class="container container--gray experience" id="experience">
     <div class="experience__text">
-        <h1>
+        <h2 class="header1">
             Experience
-        </h1>
+        </h2>
         <p class="subtitle">
             Here is a quick summary of Capibarara most recent experiences:
         </p>
     </div>
     <div class="experience__grid">
-            <div class="body2 drop-shadow--md experience__grid__date active" data-order="1">
-                May 2020 - Present
-            </div>
-            <div class="body2 drop-shadow--md experience__grid__date" data-order="2">
-                Dec 2019 - May 2020
-            </div>
-            <div class="body2 drop-shadow--md experience__grid__date" data-order="3">
-                May 2019 - Dec 2019
-            </div>
-        <div class="drop-shadow--md experience__grid__exp active">
-            <img src="static/img/Ws-Logo.svg">
-            <div class="experience__grid__exp__text">
-                <p class="subtitle--semibold">
+        <div class="body2 drop-shadow--md experience__date active" data-order="1">
+            May 2020 - Present
+        </div>
+        <div class="body2 drop-shadow--md experience__date" data-order="2">
+            Dec 2019 - May 2020
+        </div>
+        <div class="body2 drop-shadow--md experience__date" data-order="3">
+            May 2019 - Dec 2019
+        </div>
+        <div class="drop-shadow--md experience__detailed-card active">
+            <img src="static/img/ws-logo.svg">
+            <div class="experience__details">
+                <h6 class="subtitle--semibold">
                     Middle Frontend Developer
-                </p>
+                </h6>
                 <ul class="body2">
                     <li>
                         Collaborating with senior developers to enhance skills and learn new technologies
@@ -141,23 +146,23 @@
 </section>
 <section class="container work" id="work">
     <div class="work__text">
-        <h1>
+        <h2 class="header1">
             Work
-        </h1>
+        </h2>
         <p class="subtitle">
             Some of the noteworthy projects Capibarara have built:
         </p>
     </div>
     <div class="work__card drop-shadow--md">
-        <div class="work__card__img">
+        <div class="work__screenshot">
             <img class="drop-shadow--lg"
                  src="static/img/screenshot-work-facts.png"
                  alt="visit capybarafacts.com!">
         </div>
-        <div class="work__card__info">
-            <p class="subtitle--semibold">
+        <div class="work__info">
+            <h6 class="subtitle--semibold">
                 Capybara Facts
-            </p>
+            </h6>
             <p class="body2">
                 This site provides detailed and accurate information about capybaras. It covers
                 various topics such as their habitat, physical characteristics, behavior, diet,
@@ -165,7 +170,7 @@
                 The site aims to educate visitors who are interested in learning more about these
                 unique creatures
             </p>
-            <div class="work__card__info__pills">
+            <div class="work__pills">
                 <span class="body3--medium">
                     Next.js
                 </span>
@@ -194,15 +199,15 @@
         </div>
     </div>
     <div class="work__card drop-shadow--md">
-        <div class="work__card__img">
+        <div class="work__screenshot">
             <img class="drop-shadow--lg"
                  src="static/img/screenshot-work-tips.png"
                  alt="visit capybaratips.com!">
         </div>
-        <div class="work__card__info">
-            <p class="subtitle--semibold">
+        <div class="work__info">
+            <h6 class="subtitle--semibold">
                 CapybaraTips
-            </p>
+            </h6>
             <p class="body2">
                 This website is dedicated to providing practical tips and guides on how to care for
                 capybaras as pets. It covers essential topics such as feeding and nutrition, housing
@@ -210,7 +215,7 @@
                 also include testimonials or experiences shared by capybara owners or experts. It
                 aims to assist individuals who are considering or already own capybaras as pets.
             </p>
-            <div class="work__card__info__pills">
+            <div class="work__pills">
                 <span class="body3--medium">
                     Next.js
                 </span>
@@ -239,15 +244,15 @@
         </div>
     </div>
     <div class="work__card drop-shadow--md">
-        <div class="work__card__img">
+        <div class="work__screenshot">
             <img class="drop-shadow--lg"
                  src="static/img/screenshot-work-guide.png"
                  alt="visit whatiscapybara.com!">
         </div>
-        <div class="work__card__info">
-            <p class="subtitle--semibold">
+        <div class="work__info">
+            <h6 class="subtitle--semibold">
                 What Is Capybara
-            </p>
+            </h6>
             <p class="body2">
                 This site serves as a comprehensive introduction to capybaras for those who
                 are unfamiliar with the species. It covers basic information, such as the
@@ -256,7 +261,7 @@
                 objective is to provide a general overview for individuals seeking introductory
                 knowledge about capybaras.
             </p>
-            <div class="work__card__info__pills">
+            <div class="work__pills">
                 <span class="body3--medium">
                     React
                 </span>
@@ -287,18 +292,18 @@
 </section>
 <section class="container container--gray testimonials" id="testimonials">
     <div class="testimonials__text">
-        <h1>
+        <h2 class="header1">
             Testimonials
-        </h1>
+        </h2>
         <p class="subtitle">
             Nice things people have said about me:
         </p>
     </div>
     <div class="testimonials__grid">
-        <div class="testimonials__grid__card drop-shadow--md active" data-order="1">
-            <div class="card__head">
+        <div class="testimonials__card drop-shadow--md active" data-order="1">
+            <div class="testimonials__card-head">
                 <img src="static/img/testimonials-1.png">
-                <div class="card__head__details">
+                <div class="testimonials__card-details">
                     <h3 class="header3--semibold">
                         Sarah
                     </h3>
@@ -307,16 +312,16 @@
                     </p>
                 </div>
             </div>
-            <p class="body2">
+            <p class="testimonials__comment body2">
                 “I had the opportunity to see a Capibarara at the zoo, and it was such an incredible experience!
                 They are such gentle creatures and so fascinating to watch. Their size and calm nature definitely
                 make them unique among other animal species.”
             </p>
         </div>
-        <div class="testimonials__grid__card drop-shadow--md" data-order="2">
-            <div class="card__head">
+        <div class="testimonials__card drop-shadow--md" data-order="2">
+            <div class="testimonials__card-head">
                 <img src="static/img/testimonials-2.png">
-                <div class="card__head__details">
+                <div class="testimonials__card-details">
                     <h3 class="subtitle--semibold">
                         Jason
                     </h3>
@@ -325,17 +330,17 @@
                     </p>
                 </div>
             </div>
-            <p class="body2">
+            <p class="testimonials__comment body2">
                 “I recently read about Capybarara and I must say, they are truly fascinating animals. Their social
                 behavior and close-knit family structures are so interesting, and I love how they live in such
                 harmony with other animals in their habitats. Definitely one of the most underrated animals
                 out there!”
             </p>
         </div>
-        <div class="testimonials__grid__card drop-shadow--md" data-order="3">
-            <div class="card__head">
+        <div class="testimonials__card drop-shadow--md" data-order="3">
+            <div class="testimonials__card-head">
                 <img src="static/img/testimonials-3.png">
-                <div class="card__head__details">
+                <div class="testimonials__card-details">
                     <h3 class="subtitle--semibold">
                         Emma
                     </h3>
@@ -344,17 +349,17 @@
                     </p>
                 </div>
             </div>
-            <p class="body2">
+            <p class="testimonials__comment body2">
                 “I had the chance to interact with a Capybarara at a wildlife sanctuary, and it was such
                 a memorable experience. They are extremely friendly and affectionate. I was surprised by how
                 intelligent they are, and their level of comfort with humans. I would highly recommend anyone
                 to see them up close!:”
             </p>
         </div>
-        <div class="testimonials__grid__card drop-shadow--md" data-order="4">
-            <div class="card__head">
+        <div class="testimonials__card drop-shadow--md" data-order="4">
+            <div class="testimonials__card-head">
                 <img src="static/img/testimonials-4.png">
-                <div class="card__head__details">
+                <div class="testimonials__card-details">
                     <h3 class="subtitle--semibold">
                         Megan
                     </h3>
@@ -363,7 +368,7 @@
                     </p>
                 </div>
             </div>
-            <p class="body2">
+            <p class="testimonials__comment body2">
                 “As an animal lover, I've always been fascinated by Capybarara. They are super social creatures
                 and thrive in groups. It's amazing how they have adaptations that allow them to live both on land
                 and in water. Their unique appearance and laid-back personality make them the perfect animal
@@ -374,22 +379,22 @@
 </section>
 <section class="container container--gray contacts" id="contacts">
     <div class="contacts__text">
-        <h1>
+        <h2 class="header1">
             Get in touch
-        </h1>
+        </h2>
         <p class="subtitle">
             What’s next? Feel free to reach out to Capibarara if you're looking for a developer,
             have a query, or simply want to connect.
         </p>
     </div>
     <div class="contacts__info">
-        <div class="contacts__info__row">
+        <div class="contacts__row">
             <img src="static/img/envelope.svg">
             <a class="header2" href="mailto:capibarara@gmail.com">
                 capibarara@gmail.com
             </a>
         </div>
-        <div class="contacts__info__row">
+        <div class="contacts__row">
             <img src="static/img/phone.svg">
             <a class="header2" href="tel:+88002005920">
                 +8 800 200-59-20

@@ -1,10 +1,7 @@
 
 .header {
-    padding: 16px 112px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 @media (max-width: 768px){
@@ -13,12 +10,27 @@
     }
 }
 
+.header-wrapper {
+    max-width: 1280px;
+    padding: 0 32px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px){
+    .header-wrapper{
+        padding: 0;
+    }
+}
+
 .header__menu {
     display: flex;
     gap: 24px;
 }
 
-.header__menu__item {
+.header__menu-item {
     color: var(--gray-600);
 }
 

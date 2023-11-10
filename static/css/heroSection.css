@@ -1,7 +1,10 @@
 
 .hero {
-    padding-top: var(--container-padding);
+    padding-top: var(--container-padding-tb);
     padding-bottom: 120px;
+
+    position: relative;
+    overflow: hidden;
 
     display: grid;
     justify-content: space-between;
@@ -10,16 +13,6 @@
             "text   image"
             "button image";
     gap: 48px 32px;
-
-    background-image:
-            url("../img/Wave-top.svg"),
-            url("../img/Wave-oranges.svg"),
-            url("../img/Wave-bottom.svg");
-    background-repeat: no-repeat;
-    background-position:
-            bottom,
-            left 80px bottom,
-            bottom;
 }
 
 @media (max-width: 1024px) {
@@ -56,12 +49,12 @@
     color: var(--gray-900)
 }
 
-.hero__text p {
+.hero__text .body2 {
     color: var(--gray-600)
 }
 
 @media (max-width: 1024px) {
-    .hero__text p {
+    .hero__text .body2 {
         display: none;
     }
 }
@@ -113,4 +106,18 @@
         width: 279px;
         justify-self: center;
     }
+}
+
+.hero__wave-bottom,
+.hero__wave-top {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero__wave-oranges {
+    position: absolute;
+    bottom: 0;
+    left: 80px;
 }
