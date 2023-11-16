@@ -47,12 +47,45 @@
     align-items: center;
 }
 
-.contacts__row .header2 {
+.contacts__row a {
     color: var(--gray-600);
+    position: relative;
 }
 
 @media (max-width: 1024px) {
     .contacts__row img {
         width: 24px;
     }
+}
+
+.contacts__row a::after {
+    display: none;
+    content: 'Copied!';
+    position: absolute;
+    right: -95px;
+    top: 8px;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+
+    color: var(--gray-600);
+    background-color: var(--gray-200);
+    padding: 4px 16px;
+    border-radius: var(--radius);
+}
+
+.contacts__row a.copied::after {
+    display: flex;
+    content: 'Copied!';
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(-1em);
+    animation: clipboarddone 1.5s ease;
+}
+
+@keyframes clipboarddone {
+    70% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(0); }
 }
