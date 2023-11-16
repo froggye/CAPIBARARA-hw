@@ -23,6 +23,9 @@ function openMenu () {
     }
 }
 
+const button = document.getElementById("menu-toggle");
+button.addEventListener("click", openMenu);
+
 window.onresize = function(event) {
     if (window.innerWidth > 768) {
         if (header.classList.contains('menu-expanded')){
