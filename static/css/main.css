@@ -64,3 +64,38 @@
     background: var(--gray-300);
     border-radius: 20px;
 }
+
+
+.annoying-message {
+    position: fixed;
+    right: 20px;
+    bottom: 0;
+    z-index: 8;
+
+    transition: transform ease-out 500ms;
+}
+
+.annoying-message__image {
+    max-width: 410px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .annoying-message__image {
+        max-width: 300px;
+    }
+}
+
+.annoying-message__button {
+    background-image: url("../img/close.svg");
+    width: 36px;
+    height: 36px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.annoying-message.hidden {
+    transform: translateX(110%);
+}

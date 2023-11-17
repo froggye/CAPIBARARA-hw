@@ -23,8 +23,8 @@ function openMenu () {
     }
 }
 
-const button = document.getElementById("menu-toggle");
-button.addEventListener("click", openMenu);
+const menuButton = document.getElementById("menu-toggle");
+menuButton.addEventListener("click", openMenu);
 
 window.onresize = function(event) {
     if (window.innerWidth > 768) {

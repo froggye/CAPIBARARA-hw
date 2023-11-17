@@ -37,7 +37,7 @@ else {
 const yellow = "#FFD600";
 const orange = "#F4900C";
 function setColor (el) {
-    let str = el.textContent;
+    let str = el.textContent.trim();
     el.innerHTML = '';
     let space = 0;
 
