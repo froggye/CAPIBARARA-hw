@@ -1,6 +1,6 @@
 'use strict';
 
-let currentActive = 0;
+let currentTestimonial = 0;
 
 let tesImages = [
     "static/img/testimonials-1.png",
@@ -45,7 +45,7 @@ for (let i = 0; i < tesNames.length; ++i) {
     li.classList.add('testimonials__card');
     li.classList.add('drop-shadow--md');
     li.dataset.order = i + 1;
-    if (i === currentActive) {
+    if (i === currentTestimonial) {
         li.classList.add('active');
     }
 
@@ -53,7 +53,7 @@ for (let i = 0; i < tesNames.length; ++i) {
         '<div class="testimonials__card-head">' +
         '    <img src="' + tesImages[i] + '">' +
         '    <div class="testimonials__card-details">';
-    if (i === currentActive) {
+    if (i === currentTestimonial) {
         content +=
             '        <h3 class="header3--semibold">' +
             tesNames[i] +
