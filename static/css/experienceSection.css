@@ -79,6 +79,10 @@
     padding: 16px 32px;
     background-color: white;
     color: var(--gray-500);
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }
 
 .experience__date.active {

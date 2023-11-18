@@ -30,7 +30,7 @@ let expLists = [
 let experienceGrid = document.getElementById("experience-grid");
 
 for (let i = 0; i < expDates.length; ++i) {
-    let date = document.createElement('div');
+    let date = document.createElement('button');
     date.classList.add('body2');
     date.classList.add('drop-shadow--md');
     date.classList.add('experience__date');
