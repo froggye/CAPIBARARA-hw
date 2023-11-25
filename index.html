@@ -27,6 +27,7 @@
     <script src="static/scripts/contacts.js" async defer></script>
     <script src="static/scripts/annoying-message.js" defer></script>
     <script src="static/scripts/experience.js" defer></script>
+    <script src="static/scripts/formValidate.js" defer></script>
 </head>
 
 
@@ -132,7 +133,8 @@
             Do you wanna chat with Capibarara? Then send the request!
         </p>
     </div>
-    <form class="request-form__form drop-shadow--lg">
+    <form class="request-form__form drop-shadow--lg"
+          action="#" id="user-input" name="userInput" >
         <div class="request-form__input-wrapper">
             <label for="fsubject" class="request-form__form-label body3">
                 Subject*
@@ -151,8 +153,8 @@
                    type="text"
                    id="fname"
                    name="fname"
-                   required
-                   value="Capibarara fan">
+                   required>
+<!--                   value="Capibarara fan">-->
         </div>
         <div class="request-form__input-wrapper">
             <label for="fphone" class="request-form__form-label body3">
@@ -174,7 +176,7 @@
                       name="fdescription"
                       rows="6" cols="10"></textarea>
         </div>
-        <button class="request-form__button textbutton body2--medium" type="submit" disabled>
+        <button class="request-form__button textbutton body2--medium" id="form-button" disabled>
             Send it!
         </button>
     </form>

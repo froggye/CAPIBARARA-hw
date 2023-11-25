@@ -81,3 +81,12 @@
     background: var(--gray-50);
     color: var(--gray-900);
 }
+
+.request-form__form-field--error {
+    border-color: var(--error);
+}
+
+.request-form__error-label,
+.request-form__form-label--error {
+    color: var(--error);
+}
