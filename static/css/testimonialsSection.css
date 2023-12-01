@@ -127,15 +127,15 @@
     color: var(--gray-900);
 }
 
-.testimonials__card-details .subtitle {
+.testimonials__card-details p {
     color: var(--gray-600);
 }
 
-.testimonials__card-details .subtitle::before {
+.testimonials__card-details p::before {
     content: "/ ";
 }
 
-.testimonials__card.active .testimonials__card-details .subtitle::before {
+.testimonials__card.active .testimonials__card-details p::before {
     content: "";
 }
 

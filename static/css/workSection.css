@@ -31,13 +31,13 @@
     max-width: 1152px;
 }
 
-.work__card:nth-of-type(2n + 1) {
+.work__card:nth-of-type(2n) {
     flex-direction: row-reverse;
 }
 
 @media (max-width: 968px) {
     .work__card,
-    .work__card:nth-of-type(2n + 1) {
+    .work__card:nth-of-type(2n) {
         flex-direction: column;
         max-width: 640px;
     }
@@ -45,7 +45,7 @@
 
 @media (max-width: 768px) {
     .work__card,
-    .work__card:nth-of-type(2n + 1) {
+    .work__card:nth-of-type(2n) {
         max-width: 100%;
     }
 }
