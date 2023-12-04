@@ -158,8 +158,6 @@
 .experience__detailed-card.active {
     grid-area: exp;
     display: flex;
-
-
 }
 
 @media (max-width: 768px) {
@@ -223,5 +221,3 @@
     color: var(--orange-500);
     margin-left: -14px;
 }
-
-

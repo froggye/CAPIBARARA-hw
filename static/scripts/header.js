@@ -23,6 +23,7 @@ function openMenu () {
 const menuButton = document.getElementById("menu-toggle");
 menuButton.addEventListener("click", openMenu);
 
+
 const removeClassIfContains = function(element, className) {
     if (element.classList.contains(className)) {
         element.classList.remove(className);
@@ -35,6 +36,7 @@ function removeHeaderClasses () {
     removeClassIfContains(headerWrapper, 'menu-expanded');
     removeClassIfContains(headerTop, 'menu-expanded');
     removeClassIfContains(headerMenu, 'menu-expanded');
+
     heroSection.style.marginTop = '0';
 }
 

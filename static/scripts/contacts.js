@@ -1,32 +1,32 @@
 'use strict';
 
-async function copyText (el) {
+function copyText (el) {
     const text = el.innerText;
-    await navigator.clipboard.writeText(text);
+    navigator.clipboard.writeText(text);
 
     el.addEventListener('animationend', () => el.classList.remove('copied'), { once: true });
     el.classList.add('copied');
 }
 
 function isMobile () {
-    let details = navigator.userAgent;
-    let regexp = /android|iphone|kindle|ipad|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    const details = navigator.userAgent;
+    const regexp = /android|iphone|kindle|ipad|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
 
-    return regexp.test(details) || window.innerWidth <= 768;
+    return regexp.test(details) || window.matchMedia("(max-width: 768px)").matches;
 }
 
 const mail = document.getElementById("contact-mail");
 const phone = document.getElementById("contact-phone");
 
 if (!isMobile()) {
-    mail.href = "javascript:void(0)";
+    mail.href = "#";
     mail.addEventListener("click", function(){
-        void copyText(mail);
+        copyText(mail);
     });
 
-    phone.href = "javascript:void(0)";
+    phone.href = "#";
     phone.addEventListener("click", function(){
-        void copyText(phone);
+        copyText(phone);
     });
 }
 else {
@@ -54,4 +54,3 @@ function setColor (el) {
 
 setColor(mail);
 setColor(phone);
-

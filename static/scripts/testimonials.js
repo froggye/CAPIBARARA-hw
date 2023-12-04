@@ -42,41 +42,30 @@ let tesList = document.getElementById("testimonials-grid");
 
 for (let i = 0; i < tesNames.length; ++i) {
     let li = document.createElement('div');
-    li.classList.add('testimonials__card');
-    li.classList.add('drop-shadow--md');
+    li.className = 'testimonials__card drop-shadow--md';
     li.dataset.order = i + 1;
     if (i === currentTestimonial) {
         li.classList.add('active');
     }
 
     let content =
-        '<div class="testimonials__card-head">' +
-        '    <img src="' + tesImages[i] + '">' +
-        '    <div class="testimonials__card-details">';
+        `<div class="testimonials__card-head">
+            <img src="${tesImages[i]}">
+            <div class="testimonials__card-details">`;
     if (i === currentTestimonial) {
         content +=
-            '        <h3 class="header3--semibold">' +
-            tesNames[i] +
-            '        </h3>' +
-            '        <p class="subtitle">' +
-            tesOccupation[i] +
-            '        </p>';
+            `        <h3 class="header3--semibold">${tesNames[i]}</h3>
+                    <p class="subtitle">${tesOccupation[i]}</p>`;
     }
     else {
         content +=
-            '        <h3 class="subtitle--semibold">' +
-            tesNames[i] +
-            '        </h3>' +
-            '        <p class="body3">' +
-            tesOccupation[i] +
-            '        </p>';
+            `        <h3 class="subtitle--semibold">${tesNames[i]}</h3>
+                    <p class="body3">${tesOccupation[i]}</p>`;
     }
     content +=
-        '    </div>' +
-        '</div>' +
-        '<p class="testimonials__comment body2">' +
-        tesComments[i] +
-        '</p>';
+        `    </div>
+        </div>
+        <p class="testimonials__comment body2">${tesComments[i]}</p>`;
     li.innerHTML = content;
     tesList.appendChild(li);
 }

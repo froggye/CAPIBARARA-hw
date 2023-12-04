@@ -1,23 +1,31 @@
 'use strict';
 
-let skillsImages = [
-    "static/img/icon-javscript.png",
-    "static/img/icon-typescript.png",
-    "static/img/icon-react.png",
-    "static/img/icon-nextjs.png",
-    "static/img/icon-nodejs.png"
-];
-let skillsDescr = [
-    "Javascript",
-    "Typescript",
-    "React",
-    "Next.js",
-    "Node.js"
-];
+const skillsData = [
+    {
+        img: 'static/img/icon-javscript.png',
+        description: 'Javascript'
+    },
+    {
+        img: 'static/img/icon-typescript.png',
+        description: 'Typescript'
+    },
+    {
+        img: 'static/img/icon-react.png',
+        description: 'React'
+    },
+    {
+        img: 'static/img/icon-nextjs.png',
+        description: 'Next.js'
+    },
+    {
+        img: 'static/img/icon-nodejs.png',
+        description: 'Node.js'
+    },
+]
 
-let skillsList = document.getElementById("skills-slider");
+const skillsList = document.getElementById("skills-slider");
 
-for (let i = 0; i < skillsDescr.length; ++i) {
+for (let i = 0; i < skillsData.length; ++i) {
     let li = document.createElement('li');
     li.classList.add('skills__slider-item');
     if (i >= 3) {
@@ -25,9 +33,9 @@ for (let i = 0; i < skillsDescr.length; ++i) {
     }
 
     li.innerHTML =
-        '<img src="' + skillsImages[i] + '">' +
-        '<p class="body1">' +
-        skillsDescr[i] +
-        '</p>';
+        `<img src="${skillsData[i].img}">
+        <p class="body1">
+        ${skillsData[i].description}
+        </p>`;
     skillsList.appendChild(li);
 }
