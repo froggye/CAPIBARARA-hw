@@ -22,6 +22,46 @@ formInputs.forEach(input => {
     input.pattern = checkPattern[input.name].pattern.source;
 });
 
+
+const phoneInputField = document.getElementById('fphone');
+
+function formatPhone(value) {
+    if (!value) return value;
+    if (value.length > 1 && value[1] === '7') {
+        value = value.slice(2);
+    }
+    const phoneNumber = value.replace(/\D/g, '');
+    if (phoneNumber.length < 7) {
+        return `+7 ${phoneNumber}`;
+    }
+    if (phoneNumber.length < 9) {
+        return `+7 ${phoneNumber.slice(0, 6)}-${phoneNumber.slice(6, 8)}`;
+    }
+    return `+7 ${phoneNumber.slice(0, 6)}-${phoneNumber.slice(6, 8)}-${phoneNumber.slice(8, 10)}`;
+}
+
+phoneInputField.addEventListener("keydown", (event) => {
+    // Allow: backspace, delete, Ctrl+A, home, end, left, right
+    if (event.keyCode === 46 ||
+        event.keyCode === 8 ||
+        (event.keyCode === 65 && event.ctrlKey === true) ||
+        (event.keyCode >= 35 && event.keyCode <= 39)) {
+        return;
+    }
+    if ((event.shiftKey || (event.keyCode < 48 || event.keyCode > 57)) &&
+        (event.keyCode < 96 || event.keyCode > 105)) {
+        event.preventDefault();
+    }
+    if (phoneInputField.value.length > 14) {
+        event.preventDefault();
+    }
+});
+
+phoneInputField.addEventListener("keyup", function(){
+    phoneInputField.value = formatPhone(phoneInputField.value);
+});
+
+
 const errorsFields = {};
 
 function createError(text, input) {
@@ -56,6 +96,7 @@ function enableButton() {
     formButton.disabled = disable;
 }
 
+
 function validate(inputEvent) {
 
     const input = inputEvent.target;
@@ -76,6 +117,7 @@ function validate(inputEvent) {
 }
 
 formInputs.forEach(input => input.addEventListener('blur', validate));
+
 
 formButton.addEventListener('click', (event) => {
     event.preventDefault();
