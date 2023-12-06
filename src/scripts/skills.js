@@ -2,23 +2,23 @@
 
 const skillsData = [
     {
-        img: 'static/img/icon-javscript.png',
+        img: 'src/img/icon-javscript.png',
         description: 'Javascript'
     },
     {
-        img: 'static/img/icon-typescript.png',
+        img: 'src/img/icon-typescript.png',
         description: 'Typescript'
     },
     {
-        img: 'static/img/icon-react.png',
+        img: 'src/img/icon-react.png',
         description: 'React'
     },
     {
-        img: 'static/img/icon-nextjs.png',
+        img: 'src/img/icon-nextjs.png',
         description: 'Next.js'
     },
     {
-        img: 'static/img/icon-nodejs.png',
+        img: 'src/img/icon-nodejs.png',
         description: 'Node.js'
     },
 ]

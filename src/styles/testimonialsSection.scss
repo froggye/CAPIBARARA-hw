@@ -1,0 +1,129 @@
+
+.testimonials {
+    @include container-flex;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .header1 {
+            color: $orange-500;
+            text-align: center;
+        }
+        .subtitle {
+            color: $gray-600;
+            text-align: center;
+        }
+    }
+    &__grid {
+        max-width: 1216px;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: minmax(auto, 480px) 32px 1fr 48px 1fr;
+        grid-template-areas:
+            "card-1 . card-2 card-2 card-2"
+            "card-1 . card-3 .      card-4";
+        gap: 28px 0;
+        @media (max-width: $tablet-width) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+                "card-1 card-1 card-1"
+                "card-2 card-3 card-4";
+            gap: 32px;
+        }
+        @media (max-width: $mobile-width) {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+            "card-1"
+            "card-2"
+            "card-3"
+            "card-4";
+        }
+    }
+    &__card-head {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+
+        img {
+            display: none;
+        }
+    }
+    &__card-details {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        flex-wrap: wrap;
+
+        h3 {
+            color: $gray-900;
+        }
+        p {
+            color: $gray-600;
+
+            &::before {
+                content: "/ ";
+            }
+        }
+    }
+    &__comment {
+        color: $gray-600;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    &__card {
+        padding: 32px;
+        background-color: white;
+        border-radius: var(--radius);
+
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &[data-order="1"] {
+            grid-area: card-1;
+        }
+        &[data-order="2"] {
+            grid-area: card-2;
+        }
+        &[data-order="3"] {
+            grid-area: card-3;
+            @media (max-width: $tablet-width){
+                margin: 0;
+            }
+        }
+        &[data-order="4"] {
+            grid-area: card-4;
+            @media (max-width: $tablet-width){
+                margin: 0;
+            }
+        }
+        &.active {
+            gap: 24px;
+
+            .testimonials {
+                &__card-head img {
+                    display: block;
+                }
+                &__card-details {
+                    flex-direction: column;
+                    gap: 0;
+                    align-items: start;
+                }
+                &__card-details p::before {
+                    content: "";
+                }
+                &__comment {
+                    overflow: visible;
+                    display: block;
+                }
+            }
+        }
+    }
+
+}

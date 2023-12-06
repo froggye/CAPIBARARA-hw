@@ -4,8 +4,12 @@
     border: 0;
 }
 
-*, *::before, *::after {
+* {
     box-sizing: border-box;
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
 }
 
 :focus, :active {
@@ -14,10 +18,10 @@
 
 a {
     text-decoration: none;
-}
-
-a:focus, a:active {
-    outline: none;
+    &:focus,
+    &:active {
+        outline: none;
+    }
 }
 
 nav, footer, header, aside {
@@ -46,13 +50,17 @@ input {
     color: inherit;
 }
 
-button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
+button {
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
 }
 
-ul li {
-    list-style: none;
+ul {
+    li {
+        list-style: none;
+    }
 }
 
 img {

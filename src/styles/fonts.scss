@@ -1,0 +1,134 @@
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../font/Inter-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../font/Inter-SemiBold.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../font/Inter-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../font/Inter-Regular.ttf');
+    font-weight: 400;
+}
+
+body {
+    font-family: Inter, sans-serif;
+}
+
+h1, .header1 {
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: -1.2px;
+    @media (max-width: $tablet-width) {
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: -0.96px;
+    }
+    @media (max-width: $mobile-width) {
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: unset;
+    }
+}
+
+h2, .header2 {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: -0.72px;
+    @media (max-width: $tablet-width) {
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.36px;
+    }
+}
+
+h3 {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: -0.6px;
+    @media (max-width: $tablet-width) {
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.48px;
+    }
+}
+
+.header3 {
+    @extend h3;
+    &--semibold {
+        @extend h3;
+    }
+    &--bold {
+        @extend h3;
+        font-weight: 700;
+    }
+}
+
+.subtitle {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    @media (max-width: $tablet-width) {
+        font-size: 18px;
+    }
+    &--semibold {
+        @extend .subtitle;
+        font-weight: 600;
+    }
+}
+
+.body1 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    @media (max-width: $tablet-width) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.body2 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    &--medium {
+        @extend .body2;
+        font-weight: 500;
+    }
+    &--semibold {
+        @extend .body2;
+        font-weight: 600;
+    }
+}
+
+.body3 {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    &--medium {
+        @extend .body3;
+        font-weight: 500;
+    }
+}

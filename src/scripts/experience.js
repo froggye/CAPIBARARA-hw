@@ -57,7 +57,7 @@ for (let i = 0; i < expData.length; ++i) {
     }
 
     let content =
-        `<img src="static/img/ws-logo.svg">
+        `<img src="src/img/ws-logo.svg">
         <div class="experience__details">
             <h6 class="subtitle--semibold">${expData[i].title}</h6>
             <ul class="body2">`;

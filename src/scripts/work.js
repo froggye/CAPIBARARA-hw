@@ -2,7 +2,7 @@
 
 const workData = [
     {
-        img: 'static/img/screenshot-work-facts.png',
+        img: 'src/img/screenshot-work-facts.png',
         alt: 'visit capybarafacts.com!',
         title: 'Capybara Facts',
         body:
@@ -23,7 +23,7 @@ const workData = [
         link: 'https://capybarafacts.com'
     },
     {
-        img: 'static/img/screenshot-work-tips.png',
+        img: 'src/img/screenshot-work-tips.png',
         alt: 'visit capybaratips.com!',
         title: 'CapybaraTips',
         body:
@@ -44,7 +44,7 @@ const workData = [
         link: 'https://capybaratips.com'
     },
     {
-        img: 'static/img/screenshot-work-guide.png',
+        img: 'src/img/screenshot-work-guide.png',
         alt: 'visit whatiscapybara.com!',
         title: 'What Is Capybara',
         body:
@@ -90,7 +90,7 @@ for (let i = 0; i < workData.length; ++i) {
     content +=
         `    </div>
             <a href="${workData[i].link}" target="_blank">
-                <img src="static/img/link.svg" alt="${workData[i].link}">
+                <img src="src/img/link.svg" alt="${workData[i].link}">
             </a>
         </div>`;
     li.innerHTML = content;

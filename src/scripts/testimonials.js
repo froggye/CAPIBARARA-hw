@@ -3,10 +3,10 @@
 let currentTestimonial = 0;
 
 let tesImages = [
-    "static/img/testimonials-1.png",
-    "static/img/testimonials-2.png",
-    "static/img/testimonials-3.png",
-    "static/img/testimonials-4.png"
+    "src/img/testimonials-1.png",
+    "src/img/testimonials-2.png",
+    "src/img/testimonials-3.png",
+    "src/img/testimonials-4.png"
 ];
 let tesNames = [
     "Sarah",
