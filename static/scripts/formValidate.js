@@ -40,16 +40,29 @@ function formatPhone(value) {
     return `+7 ${phoneNumber.slice(0, 6)}-${phoneNumber.slice(6, 8)}-${phoneNumber.slice(8, 10)}`;
 }
 
+const keyCodes = Object.freeze({
+    Backspace: 8,
+    Delete: 46,
+    KeyA: 65,
+    End: 35,
+    Home: 36,
+    LeftArrow: 37,
+    RightArrow: 39,
+    Num0: 48,
+    Num9: 57,
+    Numpad0: 96,
+    Numpad9: 105
+});
+
 phoneInputField.addEventListener("keydown", (event) => {
-    // Allow: backspace, delete, Ctrl+A, home, end, left, right
-    if (event.keyCode === 46 ||
-        event.keyCode === 8 ||
-        (event.keyCode === 65 && event.ctrlKey === true) ||
-        (event.keyCode >= 35 && event.keyCode <= 39)) {
+    if (event.keyCode === keyCodes.Delete ||
+        event.keyCode === keyCodes.Backspace ||
+        (event.ctrlKey === true && event.keyCode === keyCodes.KeyA) ||
+        (event.keyCode >= keyCodes.End && event.keyCode <= keyCodes.RightArrow)) {
         return;
     }
-    if ((event.shiftKey || (event.keyCode < 48 || event.keyCode > 57)) &&
-        (event.keyCode < 96 || event.keyCode > 105)) {
+    if ((event.shiftKey || (event.keyCode < keyCodes.Num0 || event.keyCode > keyCodes.Num9)) &&
+        (event.keyCode < keyCodes.Numpad0 || event.keyCode > keyCodes.Numpad9)) {
         event.preventDefault();
     }
     if (phoneInputField.value.length > 14) {
