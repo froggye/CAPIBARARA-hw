@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="static/css/experienceSection.css">
     <link rel="stylesheet" href="static/css/workSection.css">
     <link rel="stylesheet" href="static/css/testimonialsSection.css">
+    <link rel="stylesheet" href="static/css/request-form.css">
     <link rel="stylesheet" href="static/css/contactsSection.css">
 
     <script src="static/scripts/header.js" defer></script>
@@ -26,6 +27,7 @@
     <script src="static/scripts/contacts.js" async defer></script>
     <script src="static/scripts/annoying-message.js" defer></script>
     <script src="static/scripts/experience.js" defer></script>
+    <script src="static/scripts/formValidate.js" defer></script>
 </head>
 
 
@@ -67,7 +69,7 @@
             is determined to utilize its unique skills and traits to secure a fulfilling position!
         </p>
     </div>
-    <a class="hero__button subtitle--semibold" href="#contacts">
+    <a class="hero__button textbutton subtitle--semibold" href="#request-form">
         I WANNA EMPLOY YOU!!!!
     </a>
     <img class="hero__img" src="static/img/hero-pic.png"
@@ -121,6 +123,63 @@
     </div>
     <div class="testimonials__grid" id="testimonials-grid">
     </div>
+</section>
+<section class="container request-form" id="request-form">
+    <div class="request-form__text">
+        <h2 class="header1">
+            Contact Capibarara
+        </h2>
+        <p class="subtitle">
+            Do you wanna chat with Capibarara? Then send the request!
+        </p>
+    </div>
+    <form class="request-form__form drop-shadow--lg"
+          action="#" id="user-input" name="userInput" >
+        <div class="request-form__input-wrapper">
+            <label for="fsubject" class="request-form__form-label body3">
+                Subject*
+            </label>
+            <input class="request-form__form-field body1"
+                   type="text"
+                   id="fsubject"
+                   name="fsubject"
+                   required>
+        </div>
+        <div class="request-form__input-wrapper">
+            <label for="fname" class="request-form__form-label body3">
+                Name*
+            </label>
+            <input class="request-form__form-field body1"
+                   type="text"
+                   id="fname"
+                   name="fname"
+                   required
+                   value="Capibarara fan">
+        </div>
+        <div class="request-form__input-wrapper">
+            <label for="fphone" class="request-form__form-label body3">
+                Phone*
+            </label>
+            <input class="request-form__form-field body1"
+                   type="text"
+                   id="fphone"
+                   name="fphone"
+                   required
+                   placeholder="+7 ______-__-__">
+        </div>
+        <div class="request-form__input-wrapper">
+            <label for="fdescription" class="request-form__form-label body3">
+                Description
+            </label>
+            <textarea class="request-form__form-field body1"
+                      id="fdescription"
+                      name="fdescription"
+                      rows="6" cols="10"></textarea>
+        </div>
+        <button class="request-form__button textbutton body2--medium" id="form-button" disabled>
+            Send it!
+        </button>
+    </form>
 </section>
 <section class="container container--gray contacts" id="contacts">
     <div class="contacts__text">

@@ -50,6 +50,24 @@
 }
 
 
+.textbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+    height: fit-content;
+
+    color: var(--gray-50);
+    padding: 8px 48px;
+    background-color: var(--orange-400);
+    border-radius: 20px;
+}
+
+.textbutton:disabled {
+    opacity: 0.4;
+}
+
 
 ::-webkit-scrollbar {
     width: 4px;

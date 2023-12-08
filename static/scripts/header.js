@@ -23,22 +23,20 @@ function openMenu () {
 const menuButton = document.getElementById("menu-toggle");
 menuButton.addEventListener("click", openMenu);
 
+
+const removeClassIfContains = function(element, className) {
+    if (element.classList.contains(className)) {
+        element.classList.remove(className);
+    }
+}
+
 function removeHeaderClasses () {
-    if (header.classList.contains('menu-expanded')){
-        header.classList.remove('menu-expanded');
-    }
-    if (headerWrapper.classList.contains('drop-shadow--2xl')){
-        headerWrapper.classList.remove('drop-shadow--2xl');
-    }
-    if (headerWrapper.classList.contains('menu-expanded')){
-        headerWrapper.classList.remove('menu-expanded');
-    }
-    if (headerTop.classList.contains('menu-expanded')){
-        headerTop.classList.remove('menu-expanded');
-    }
-    if (headerMenu.classList.contains('menu-expanded')){
-        headerMenu.classList.remove('menu-expanded');
-    }
+    removeClassIfContains(header, 'menu-expanded');
+    removeClassIfContains(headerWrapper, 'drop-shadow--2xl');
+    removeClassIfContains(headerWrapper, 'menu-expanded');
+    removeClassIfContains(headerTop, 'menu-expanded');
+    removeClassIfContains(headerMenu, 'menu-expanded');
+
     heroSection.style.marginTop = '0';
 }
 
