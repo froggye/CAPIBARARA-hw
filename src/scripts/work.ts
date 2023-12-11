@@ -1,6 +1,11 @@
-'use strict';
 
-const workData = [
+const workData: {
+    img: string,
+    alt: string,
+    title: string,
+    body: string,
+    pills: string[],
+    link: string }[] = [
     {
         img: 'src/img/screenshot-work-facts.png',
         alt: 'visit capybarafacts.com!',
@@ -48,7 +53,7 @@ const workData = [
         alt: 'visit whatiscapybara.com!',
         title: 'What Is Capybara',
         body:
-        `"This site serves as a comprehensive introduction to capybaras for those who" +
+            `"This site serves as a comprehensive introduction to capybaras for those who" +
          "are unfamiliar with the species. It covers basic information, such as the" +
          "capybara's classification, origin, and distinct features. It may include" +
          "images or illustrations to help readers visualize the animal. The site's main" +
@@ -69,7 +74,7 @@ const workData = [
 
 let workList = document.getElementById("work");
 
-for (let i = 0; i < workData.length; ++i) {
+for (let i: number = 0; i < workData.length; ++i) {
     let li = document.createElement('li');
     li.className = 'work__card drop-shadow--md';
 

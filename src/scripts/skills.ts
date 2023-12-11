@@ -1,6 +1,7 @@
-'use strict';
 
-const skillsData = [
+const skillsData: {
+    img: string,
+    description: string }[] = [
     {
         img: 'src/img/icon-javscript.png',
         description: 'Javascript'
@@ -25,7 +26,7 @@ const skillsData = [
 
 const skillsList = document.getElementById("skills-slider");
 
-for (let i = 0; i < skillsData.length; ++i) {
+for (let i: number = 0; i < skillsData.length; ++i) {
     let li = document.createElement('li');
     li.classList.add('skills__slider-item');
     if (i >= 3) {
