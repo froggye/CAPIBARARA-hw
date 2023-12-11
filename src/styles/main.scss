@@ -1,0 +1,116 @@
+
+$tablet-width: 1024px;
+$mobile-width: 768px;
+
+:root {
+    --radius: 12px;
+    --container-padding-tb: 96px;
+    --container-padding-lr: 80px;
+}
+
+@media (max-width: $tablet-width) {
+    :root {
+        --container-padding-tb: 64px;
+        --container-padding-lr: 64px;
+    }
+}
+
+@media (max-width: $mobile-width) {
+    :root {
+        --container-padding-tb: 32px;
+        --container-padding-lr: 16px;
+    }
+}
+
+$radius: var(--radius);
+$padding-lr: var(--container-padding-lr);
+$padding-tb: var(--container-padding-tb);
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1440px;
+    padding-left: $padding-lr;
+    padding-right: $padding-lr;
+    &--gray {
+        background-color: $gray-50;
+    }
+}
+
+.drop-shadow {
+    &--md {
+        box-shadow:
+                0 2px 2px 0 rgba(0, 0, 0, 0.06),
+                0 4px 3px 0 rgba(0, 0, 0, 0.07);
+    }
+    &--lg {
+        box-shadow:
+                0 10px 8px 0 rgba(0, 0, 0, 0.04),
+                0 4px 3px 0 rgba(0, 0, 0, 0.10);
+    }
+    &--2xl {
+        box-shadow:
+                0 25px 25px 0 rgba(0, 0, 0, 0.15);
+    }
+}
+
+
+.textbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+    height: fit-content;
+
+    color: var(--gray-50);
+    padding: 8px 48px;
+    background-color: var(--orange-400);
+    border-radius: 20px;
+
+    &:disabled {
+        opacity: 0.4;
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 4px;
+    &-track{
+        background: white;
+        border-radius: 20px;
+    }
+    &-thumb{
+        background: var(--gray-300);
+        border-radius: 20px;
+    }
+}
+
+
+.annoying-message {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 8;
+    transition: transform ease-out 500ms;
+
+    &__image {
+        max-width: 410px;
+        width: 100%;
+        @media (max-width: $tablet-width) {
+            max-width: 300px;
+        }
+    }
+    &__button {
+        background-image: url("../img/close.svg");
+        width: 36px;
+        height: 36px;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &.hidden {
+        transform: translateX(110%);
+    }
+}

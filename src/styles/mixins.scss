@@ -1,0 +1,33 @@
+
+@mixin container-flex($pt: $padding-tb, $pb: $padding-tb, $gap: 48px) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin bg-image($position, $attachment: scroll, $size: auto auto, $img_urls...) {
+  background-image: #{join($img_urls, (), comma)};
+  background-repeat: no-repeat;
+  background-position: unquote($position);
+  background-attachment: $attachment;
+  background-size: $size;
+
+  @media (max-width: $mobile-width) {
+    background-image: none;
+  }
+}
+
+@mixin animate($animation, $duration, $method, $times) {
+  animation: $animation $duration $method $times;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}

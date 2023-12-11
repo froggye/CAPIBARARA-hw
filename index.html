@@ -6,38 +6,20 @@
         initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <title>Capibarara</title>
 
-    <link rel="stylesheet" href="static/css/reset.css">
-    <link rel="stylesheet" href="static/css/main.css">
-    <link rel="stylesheet" href="static/css/colors.css">
-    <link rel="stylesheet" href="static/css/fonts.css">
-
-    <link rel="stylesheet" href="static/css/headerSection.css">
-    <link rel="stylesheet" href="static/css/heroSection.css">
-    <link rel="stylesheet" href="static/css/skillsSection.css">
-    <link rel="stylesheet" href="static/css/experienceSection.css">
-    <link rel="stylesheet" href="static/css/workSection.css">
-    <link rel="stylesheet" href="static/css/testimonialsSection.css">
-    <link rel="stylesheet" href="static/css/contactsSection.css">
-
-    <script src="static/scripts/header.js" defer></script>
-    <script src="static/scripts/skills.js" defer></script>
-    <script src="static/scripts/work.js" defer></script>
-    <script src="static/scripts/testimonials.js" defer></script>
-    <script src="static/scripts/contacts.js" async defer></script>
-    <script src="static/scripts/annoying-message.js" defer></script>
-    <script src="static/scripts/experience.js" defer></script>
+    <link rel="stylesheet" href="src/styles/index.scss">
+    <script type="module" src="src/scripts/index.ts"></script>
 </head>
 
 
 <body>
 <div class="annoying-message">
-    <img class="annoying-message__image" src="static/img/annoying-message.png">
+    <img class="annoying-message__image" src="src/img/annoying-message.png">
     <button id="message-close" class="annoying-message__button"></button>
 </div>
 <section class="container header">
     <div class="header-wrapper">
         <div class="header__top">
-            <img src="static/img/logo.svg" alt="Capibarara.com">
+            <img src="src/img/logo.svg" alt="Capibarara.com">
             <button id="menu-toggle" class="header__menu-mobile"></button>
         </div>
         <nav class="header__menu body2--medium">
@@ -67,14 +49,14 @@
             is determined to utilize its unique skills and traits to secure a fulfilling position!
         </p>
     </div>
-    <a class="hero__button subtitle--semibold" href="#contacts">
+    <a class="hero__button textbutton subtitle--semibold" href="#request-form">
         I WANNA EMPLOY YOU!!!!
     </a>
-    <img class="hero__img" src="static/img/hero-pic.png"
+    <img class="hero__img" src="src/img/hero-pic.png"
          alt="My pic is supposed to be here">
-    <img src="static/img/wave-bottom.svg" class="hero__wave-bottom">
-    <img src="static/img/wave-oranges.svg" class="hero__wave-oranges">
-    <img src="static/img/wave-top.svg" class="hero__wave-top">
+    <img src="src/img/wave-bottom.svg" class="hero__wave-bottom">
+    <img src="src/img/wave-oranges.svg" class="hero__wave-oranges">
+    <img src="src/img/wave-top.svg" class="hero__wave-top">
 </section>
 <section class="container skills">
     <div class="skills__text">
@@ -122,6 +104,63 @@
     <div class="testimonials__grid" id="testimonials-grid">
     </div>
 </section>
+<section class="container request-form" id="request-form">
+    <div class="request-form__text">
+        <h2 class="header1">
+            Contact Capibarara
+        </h2>
+        <p class="subtitle">
+            Do you wanna chat with Capibarara? Then send the request!
+        </p>
+    </div>
+    <form class="request-form__form drop-shadow--lg"
+          action="#" id="user-input" name="userInput" >
+        <div class="request-form__input-wrapper">
+            <label for="fsubject" class="request-form__form-label body3">
+                Subject*
+            </label>
+            <input class="request-form__form-field body1"
+                   type="text"
+                   id="fsubject"
+                   name="fsubject"
+                   required>
+        </div>
+        <div class="request-form__input-wrapper">
+            <label for="fname" class="request-form__form-label body3">
+                Name*
+            </label>
+            <input class="request-form__form-field body1"
+                   type="text"
+                   id="fname"
+                   name="fname"
+                   required
+                   value="Capibarara fan">
+        </div>
+        <div class="request-form__input-wrapper">
+            <label for="fphone" class="request-form__form-label body3">
+                Phone*
+            </label>
+            <input class="request-form__form-field body1"
+                   type="text"
+                   id="fphone"
+                   name="fphone"
+                   required
+                   placeholder="+7 ______-__-__">
+        </div>
+        <div class="request-form__input-wrapper">
+            <label for="fdescription" class="request-form__form-label body3">
+                Description
+            </label>
+            <textarea class="request-form__form-field body1"
+                      id="fdescription"
+                      name="fdescription"
+                      rows="6" cols="10"></textarea>
+        </div>
+        <button class="request-form__button textbutton body2--medium" id="form-button" disabled>
+            Send it!
+        </button>
+    </form>
+</section>
 <section class="container container--gray contacts" id="contacts">
     <div class="contacts__text">
         <h2 class="header1">
@@ -134,13 +173,13 @@
     </div>
     <div class="contacts__info">
         <div class="contacts__row">
-            <img src="static/img/envelope-color.svg">
+            <img src="src/img/envelope-color.svg">
             <a id="contact-mail" class="header2" href="mailto:capibarara@gmail.com">
                 capibarara@gmail.com
             </a>
         </div>
         <div class="contacts__row">
-            <img src="static/img/phone-color.svg">
+            <img src="src/img/phone-color.svg">
             <a id="contact-phone" class="header2" href="tel:+88002005920">
                 +8 800 200-59-20
             </a>

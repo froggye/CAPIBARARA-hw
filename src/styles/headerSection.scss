@@ -1,0 +1,95 @@
+
+.header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    @media (max-width: 768px){
+        padding: 16px;
+    }
+
+    &-wrapper {
+        max-width: 1280px;
+        width: 100%;
+        padding: 0 32px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: $mobile-width){
+            padding: 0;
+
+            &.menu-expanded {
+                flex-direction: column;
+                gap: 0;
+                justify-content: flex-start;
+
+                width: 320px;
+                background-color: white;
+
+                transition: width ease-out 400ms;
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+        gap: 24px;
+        @media (max-width: $mobile-width){
+            display: none;
+
+            &.menu-expanded {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                gap: 16px;
+                padding: 16px;
+                border-bottom: 1px solid $gray-100;
+            }
+        }
+    }
+    &__menu-item {
+        color: $gray-600;
+    }
+    &__menu-mobile {
+        display: none;
+        @media (max-width: $mobile-width){
+            display: block;
+            background-image: url("../img/menu.svg");
+            width: 36px;
+            height: 36px;
+        }
+    }
+    &__top {
+        @media (max-width: $mobile-width){
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &.menu-expanded {
+                padding: 16px;
+                border-bottom: 1px solid $gray-100;
+
+                .header__menu-mobile {
+                    background-image: url("../img/close.svg");
+                }
+            }
+        }
+    }
+
+    &.menu-expanded {
+        @media (max-width: $mobile-width){
+            height: 100vh;
+            position: fixed;
+            z-index: 100;
+
+            padding: 0;
+            background: rgba(17, 24, 39, 0.10);
+            backdrop-filter: blur(4px);
+
+            transition: backdrop-filter 500ms;
+
+            display: flex;
+            justify-content: right;
+        }
+    }
+}

@@ -1,8 +1,11 @@
-'use strict';
 
-let currentExperience = 0;
+let currentExperience: number = 0;
+const experienceGrid = document.getElementById("experience-grid");
 
-const expData = [
+const expData: {
+    date: string,
+    title: string,
+    list: string[] }[] = [
     {
         date: 'May 2020 - Present',
         title: 'Middle Frontend Developer',
@@ -11,7 +14,6 @@ const expData = [
             ' Mentoring and providing guidance to junior frontend developers',
             ' Optimizing the performance of web applications'
         ]
-
     },
     {
         date: 'Dec 2019 - May 2020',
@@ -20,7 +22,6 @@ const expData = [
             ' Participating in code reviews and receiving feedback',
             ' Collaborating with UI/UX designers to implement usability and accessibility enhancements'
         ]
-
     },
     {
         date: 'May 2019 - Dec 2019',
@@ -28,16 +29,13 @@ const expData = [
         list: [
             ' Testing and debugging features or code snippets'
         ]
-
     }
 ];
 
-const experienceGrid = document.getElementById("experience-grid");
-
-for (let i = 0; i < expData.length; ++i) {
+for (let i: number = 0; i < expData.length; ++i) {
     let date = document.createElement('button');
     date.className = 'body2 drop-shadow--md experience__date';
-    date.dataset.order = i + 1;
+    date.dataset.order = String(i + 1);
     if (i === currentExperience) {
         date.classList.add('active');
     }
@@ -45,19 +43,19 @@ for (let i = 0; i < expData.length; ++i) {
     const dateContent = document.createTextNode(expData[i].date);
     date.appendChild(dateContent);
 
-    experienceGrid.appendChild(date);
+    experienceGrid?.appendChild(date);
 }
 
-for (let i = 0; i < expData.length; ++i) {
+for (let i: number = 0; i < expData.length; ++i) {
     let card = document.createElement('div');
     card.className = 'drop-shadow--md experience__detailed-card';
-    card.dataset.order = i + 1;
+    card.dataset.order = String(i + 1);
     if (i === currentExperience) {
         card.classList.add('active');
     }
 
     let content =
-        `<img src="static/img/ws-logo.svg">
+        `<img src="src/img/ws-logo.svg">
         <div class="experience__details">
             <h6 class="subtitle--semibold">${expData[i].title}</h6>
             <ul class="body2">`;
@@ -70,15 +68,19 @@ for (let i = 0; i < expData.length; ++i) {
         </div>`;
     card.innerHTML = content;
 
-    experienceGrid.appendChild(card);
+    experienceGrid?.appendChild(card);
 }
 
 const expButtons = document.getElementsByClassName("experience__date");
 const expCards = document.getElementsByClassName("experience__detailed-card");
 
-function changeExperience() {
-    for (let i = 0; i < expButtons.length; i++) {
-        if ((expButtons[i].dataset.order - 1) === currentExperience) {
+function changeExperience(this: HTMLButtonElement): void {
+    const thisDataOrder: string = this.getAttribute('data-order');
+    currentExperience = thisDataOrder - 1;
+
+    for (let i: number = 0; i < expButtons.length; i++) {
+        const dataOrder: string = expButtons[i].getAttribute('data-order');
+        if ((dataOrder - 1) === currentExperience) {
             expButtons[i].classList.add('active');
             expCards[i].classList.add('active');
         }
@@ -89,10 +91,6 @@ function changeExperience() {
     }
 }
 
-
-for (let i = 0; i < expButtons.length; i++) {
-    expButtons[i].addEventListener('click', function(){
-        currentExperience = this.dataset.order - 1;
-        changeExperience();
-    });
+for (let i: number = 0; i < expButtons.length; i++) {
+    expButtons[i]?.addEventListener('click', changeExperience);
 }

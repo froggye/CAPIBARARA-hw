@@ -1,2 +1,4 @@
 .idea
 *_test.css
+node_modules
+dist

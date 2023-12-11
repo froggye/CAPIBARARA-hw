@@ -1,31 +1,32 @@
-'use strict';
 
-const skillsData = [
+const skillsData: {
+    img: string,
+    description: string }[] = [
     {
-        img: 'static/img/icon-javscript.png',
+        img: 'src/img/icon-javscript.png',
         description: 'Javascript'
     },
     {
-        img: 'static/img/icon-typescript.png',
+        img: 'src/img/icon-typescript.png',
         description: 'Typescript'
     },
     {
-        img: 'static/img/icon-react.png',
+        img: 'src/img/icon-react.png',
         description: 'React'
     },
     {
-        img: 'static/img/icon-nextjs.png',
+        img: 'src/img/icon-nextjs.png',
         description: 'Next.js'
     },
     {
-        img: 'static/img/icon-nodejs.png',
+        img: 'src/img/icon-nodejs.png',
         description: 'Node.js'
     },
 ]
 
 const skillsList = document.getElementById("skills-slider");
 
-for (let i = 0; i < skillsData.length; ++i) {
+for (let i: number = 0; i < skillsData.length; ++i) {
     let li = document.createElement('li');
     li.classList.add('skills__slider-item');
     if (i >= 3) {
