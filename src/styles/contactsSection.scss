@@ -1,0 +1,84 @@
+
+.contacts {
+    @include container-flex;
+    @media (max-width: $tablet-width) {
+        gap: 24px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        max-width: 576px;
+
+        .header1 {
+            color: $gray-600;
+            text-align: center;
+        }
+        .subtitle {
+            color: $gray-600;
+            text-align: center;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+    &__row {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+
+        a {
+            color: $gray-600;
+            position: relative;
+            &:hover {
+                cursor: pointer;
+            }
+            &::after {
+                display: none;
+                content: 'Copied!';
+                position: absolute;
+                right: -95px;
+                top: 8px;
+
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+
+                color: $gray-600;
+                background-color: $gray-200;
+                padding: 4px 16px;
+                border-radius: $radius;
+            }
+            &.copied::after {
+                display: flex;
+                content: 'Copied!';
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transform: translateX(-1em);
+
+                @include keyframes(clipboarddone){
+                    70% {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                    100% {
+                        opacity: 0;
+                        transform: translateY(0);
+                    }
+                }
+                @include animate(clipboarddone, 1.5s, ease, 1);
+            }
+        }
+        img {
+            @media (max-width: $tablet-width) {
+                width: 24px;
+            }
+        }
+    }
+}

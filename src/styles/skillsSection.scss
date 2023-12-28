@@ -1,0 +1,57 @@
+
+.skills {
+    @include container-flex;
+
+    @include bg-image(
+                    "bottom right",
+                    null,
+                    null,
+                    url("../img/orange-corner.png"));
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .header1,
+        .subtitle {
+            color: $gray-600;
+            text-align: center;
+        }
+    }
+    &__slider {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 720px;
+        @media (max-width: $mobile-width) {
+            max-width: 480px;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            width: 100%;
+            max-width: 102px;
+            @media (max-width: $tablet-width) {
+                max-width: 90px;
+            }
+            @media (max-width: $mobile-width) {
+                &:not(:nth-child(-n+3)) {
+                    display: none;
+                }
+            }
+
+            .body1 {
+                color: $gray-600;
+            }
+            img {
+                height: 64px;
+                width: auto;
+            }
+        }
+    }
+}
