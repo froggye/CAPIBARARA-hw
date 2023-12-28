@@ -4,8 +4,6 @@ import validate from './FormValidationRules';
 
 const Form = () => {
 
-    // const [phoneInput, setPhoneInput] = useState('');
-
     const {
         inputs,
         inputMask,
