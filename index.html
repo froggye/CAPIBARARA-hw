@@ -5,186 +5,69 @@
     <meta name="viewport" content="height=device-height, width=device-width,
         initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <title>Capibarara</title>
-
-    <link rel="stylesheet" href="src/styles/index.scss">
-    <script type="module" src="src/scripts/index.ts"></script>
+    <script type="module" src="/src/main.tsx"></script>
 </head>
 
-
 <body>
-<div class="annoying-message">
-    <img class="annoying-message__image" src="src/img/annoying-message.png">
-    <button id="message-close" class="annoying-message__button"></button>
-</div>
-<section class="container header">
-    <div class="header-wrapper">
-        <div class="header__top">
-            <img src="src/img/logo.svg" alt="Capibarara.com">
-            <button id="menu-toggle" class="header__menu-mobile"></button>
-        </div>
-        <nav class="header__menu body2--medium">
-            <a href="#experience" class="header__menu-item">
-                Experience
-            </a>
-            <a href="#work" class="header__menu-item">
-                Work
-            </a>
-            <a href="#testimonials" class="header__menu-item">
-                Testimonials
-            </a>
-            <a href="#contacts" class="header__menu-item">
-                Contact
-            </a>
-        </nav>
-    </div>
-</section>
-<section class="container hero">
-    <div class="hero__text">
-        <h1>
-            Hi, I’m Capybarara&nbsp;&#128075;
-        </h1>
-        <p class="body2">
-            Known for its adorable appearance and friendly nature, the Capybarara is now embarking on a journey
-            to find a new job. Motivated by the desire to explore new opportunities and challenges, the Capybarara
-            is determined to utilize its unique skills and traits to secure a fulfilling position!
-        </p>
-    </div>
-    <a class="hero__button textbutton subtitle--semibold" href="#request-form">
-        I WANNA EMPLOY YOU!!!!
-    </a>
-    <img class="hero__img" src="src/img/hero-pic.png"
-         alt="My pic is supposed to be here">
-    <img src="src/img/wave-bottom.svg" class="hero__wave-bottom">
-    <img src="src/img/wave-oranges.svg" class="hero__wave-oranges">
-    <img src="src/img/wave-top.svg" class="hero__wave-top">
-</section>
-<section class="container skills">
-    <div class="skills__text">
-        <h2 class="header1">
-            Skills
-        </h2>
-        <p class="subtitle">
-            The skills, tools and technologies Capybarara is really good at:
-        </p>
-    </div>
-    <ul class="skills__slider" id="skills-slider">
-    </ul>
-</section>
-<section class="container container--gray experience" id="experience">
-    <div class="experience__text">
-        <h2 class="header1">
-            Experience
-        </h2>
-        <p class="subtitle">
-            Here is a quick summary of Capibarara most recent experiences:
-        </p>
-    </div>
-    <div class="experience__grid" id="experience-grid">
-    </div>
-</section>
-<section class="container work" id="work">
-    <div class="work__text">
-        <h2 class="header1">
-            Work
-        </h2>
-        <p class="subtitle">
-            Some of the noteworthy projects Capibarara have built:
-        </p>
-    </div>
-</section>
-<section class="container container--gray testimonials" id="testimonials">
-    <div class="testimonials__text">
-        <h2 class="header1">
-            Testimonials
-        </h2>
-        <p class="subtitle">
-            Nice things people have said about me:
-        </p>
-    </div>
-    <div class="testimonials__grid" id="testimonials-grid">
-    </div>
-</section>
-<section class="container request-form" id="request-form">
-    <div class="request-form__text">
-        <h2 class="header1">
-            Contact Capibarara
-        </h2>
-        <p class="subtitle">
-            Do you wanna chat with Capibarara? Then send the request!
-        </p>
-    </div>
-    <form class="request-form__form drop-shadow--lg"
-          action="#" id="user-input" name="userInput" >
-        <div class="request-form__input-wrapper">
-            <label for="fsubject" class="request-form__form-label body3">
-                Subject*
-            </label>
-            <input class="request-form__form-field body1"
-                   type="text"
-                   id="fsubject"
-                   name="fsubject"
-                   required>
-        </div>
-        <div class="request-form__input-wrapper">
-            <label for="fname" class="request-form__form-label body3">
-                Name*
-            </label>
-            <input class="request-form__form-field body1"
-                   type="text"
-                   id="fname"
-                   name="fname"
-                   required
-                   value="Capibarara fan">
-        </div>
-        <div class="request-form__input-wrapper">
-            <label for="fphone" class="request-form__form-label body3">
-                Phone*
-            </label>
-            <input class="request-form__form-field body1"
-                   type="text"
-                   id="fphone"
-                   name="fphone"
-                   required
-                   placeholder="+7 ______-__-__">
-        </div>
-        <div class="request-form__input-wrapper">
-            <label for="fdescription" class="request-form__form-label body3">
-                Description
-            </label>
-            <textarea class="request-form__form-field body1"
-                      id="fdescription"
-                      name="fdescription"
-                      rows="6" cols="10"></textarea>
-        </div>
-        <button class="request-form__button textbutton body2--medium" id="form-button" disabled>
-            Send it!
-        </button>
-    </form>
-</section>
-<section class="container container--gray contacts" id="contacts">
-    <div class="contacts__text">
-        <h2 class="header1">
-            Get in touch
-        </h2>
-        <p class="subtitle">
-            What’s next? Feel free to reach out to Capibarara if you're looking for a developer,
-            have a query, or simply want to connect.
-        </p>
-    </div>
-    <div class="contacts__info">
-        <div class="contacts__row">
-            <img src="src/img/envelope-color.svg">
-            <a id="contact-mail" class="header2" href="mailto:capibarara@gmail.com">
-                capibarara@gmail.com
-            </a>
-        </div>
-        <div class="contacts__row">
-            <img src="src/img/phone-color.svg">
-            <a id="contact-phone" class="header2" href="tel:+88002005920">
-                +8 800 200-59-20
-            </a>
-        </div>
-    </div>
-</section>
+
+<div id="root"></div>
+
+<!--<section class="container request-form" id="request-form">-->
+<!--    <div class="request-form__text">-->
+<!--        <h2 class="header1">-->
+<!--            Contact Capibarara-->
+<!--        </h2>-->
+<!--        <p class="subtitle">-->
+<!--            Do you wanna chat with Capibarara? Then send the request!-->
+<!--        </p>-->
+<!--    </div>-->
+<!--    <form class="request-form__form drop-shadow&#45;&#45;lg"-->
+<!--          action="#" id="user-input" name="userInput" >-->
+<!--        <div class="request-form__input-wrapper">-->
+<!--            <label for="fsubject" class="request-form__form-label body3">-->
+<!--                Subject*-->
+<!--            </label>-->
+<!--            <input class="request-form__form-field body1"-->
+<!--                   type="text"-->
+<!--                   id="fsubject"-->
+<!--                   name="fsubject"-->
+<!--                   required>-->
+<!--        </div>-->
+<!--        <div class="request-form__input-wrapper">-->
+<!--            <label for="fname" class="request-form__form-label body3">-->
+<!--                Name*-->
+<!--            </label>-->
+<!--            <input class="request-form__form-field body1"-->
+<!--                   type="text"-->
+<!--                   id="fname"-->
+<!--                   name="fname"-->
+<!--                   required-->
+<!--                   value="Capibarara fan">-->
+<!--        </div>-->
+<!--        <div class="request-form__input-wrapper">-->
+<!--            <label for="fphone" class="request-form__form-label body3">-->
+<!--                Phone*-->
+<!--            </label>-->
+<!--            <input class="request-form__form-field body1"-->
+<!--                   type="text"-->
+<!--                   id="fphone"-->
+<!--                   name="fphone"-->
+<!--                   required-->
+<!--                   placeholder="+7 ______-__-__">-->
+<!--        </div>-->
+<!--        <div class="request-form__input-wrapper">-->
+<!--            <label for="fdescription" class="request-form__form-label body3">-->
+<!--                Description-->
+<!--            </label>-->
+<!--            <textarea class="request-form__form-field body1"-->
+<!--                      id="fdescription"-->
+<!--                      name="fdescription"-->
+<!--                      rows="6" cols="10"></textarea>-->
+<!--        </div>-->
+<!--        <button class="request-form__button textbutton body2&#45;&#45;medium" id="form-button" disabled>-->
+<!--            Send it!-->
+<!--        </button>-->
+<!--    </form>-->
+<!--</section>-->
 </body>
 </html>

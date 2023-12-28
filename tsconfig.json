@@ -12,6 +12,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+    "jsx": "react-jsx",
 
     /* Linting */
     "strict": true,
@@ -19,7 +20,9 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "noImplicitThis": true
+    "noImplicitThis": true,
+    "composite": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src"]
 }

@@ -35,6 +35,9 @@
         a {
             color: $gray-600;
             position: relative;
+            &:hover {
+                cursor: pointer;
+            }
             &::after {
                 display: none;
                 content: 'Copied!';
